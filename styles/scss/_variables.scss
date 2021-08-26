@@ -1,0 +1,60 @@
+$screen_width : 1920px; 
+$container_width: 80%;
+$color_dark : #000;
+$color_white :#fff;
+$color_gray : #666666;
+$extra_large_title : 4.8rem;
+$large_title:2.8rem;
+$nomal_text:1.6rem;
+$large_text:2rem;
+$small_text:1.4rem;
+$background_section--gray : #f0f0f0;
+/*Reponsive screen*/
+$extra-small : 320px;
+$small-desktop: 960px;
+$large-desktop: 1200px;
+$handheld: 768px;
+$handhelds-landscape: 1024px;
+$mobile: 640px;
+$mobile-landscape: 480px;
+@font-face {
+  font-family: RedHatDisplay-bold;
+  src: url(./fonts/Red_Hat_Display/RedHatDisplay-Bold.ttf);
+}
+@font-face {
+  font-family: RedHatDisplay-regular;
+  src: url(fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: RedHatDisplay-medium;
+  src: url(fonts/Red_Hat_Display/RedHatDisplay-Medium.ttf);
+}
+@mixin responsive($canvas) {
+    @if $canvas == xs {
+      @media only screen and (max-width: 320px) { 
+          @content; 
+        }
+    }
+  
+    @else if $canvas == sm {
+      @media only screen and (min-width: 576px) { @content; }
+    }
+  
+    @else if $canvas == md {
+      @media only screen and (min-width: 768px) { @content; }
+    }
+  
+    @else if $canvas == lg {
+      @media only screen and (min-width: 992px) { @content; }
+    }
+  
+    @else if $canvas == xl {
+      @media only screen and (min-width: 1200px) { @content; }
+    }
+  
+    @else if $canvas == xxl {
+      @media only screen and (min-width: 1600px) { @content; }
+    }
+  }
+  
+
